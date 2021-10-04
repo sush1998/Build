@@ -12,9 +12,8 @@ btnClick.addEventListener("click",()=>
 })
 btnPlus.addEventListener("click",()=>
 {
-    number+=2
+    number+=2;
     output.style.fontSize=number+'px'
-    console.log(number)
 })
 
 btnMinus.addEventListener("click",()=>
