@@ -1,19 +1,21 @@
 const passwordInput=document.querySelector("#password")
 const btnCheck=document.querySelector("#btn-check")
 
-btnCheck.addEventListener("click",()=>
+function checkLength(length)
 {
-    //console.log("clicked")
-    let password=passwordInput.value;
-    
-    let passArr=password.split("")
-    if(passArr.length<10)
-    {
-        console.log("ERROR")
-    }
-    else
-    {
-        console.log(password)
-    }
+    return length>=10
+}
 
-}) 
+function btnVisiblity(flag)
+{
+    flag==true?btnCheck.style.display="block":btnCheck.style.display="none"
+}
+passwordInput.addEventListener("keypress",()=>
+{
+    console.log("pressed")
+
+    let passwordLength=passwordInput.value.split('').length
+    console.log(passwordLength)
+
+    btnVisiblity(checkLength(passwordLength))
+})
