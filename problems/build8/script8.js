@@ -8,7 +8,8 @@ function checkLength(length)
 
 function btnVisiblity(flag)
 {
-    flag==true?btnCheck.style.display="block":btnCheck.style.display="none"
+    flag==true?btnCheck.style.display="block"
+    btnCheck.style.display="none"
 }
 passwordInput.addEventListener("keypress",()=>
 {
@@ -17,5 +18,5 @@ passwordInput.addEventListener("keypress",()=>
     let passwordLength=passwordInput.value.split('').length
     console.log(passwordLength)
 
-    btnVisiblity(checkLength(passwordLength))
+    btnVisiblity.checkLength(passwordLength))
 })
